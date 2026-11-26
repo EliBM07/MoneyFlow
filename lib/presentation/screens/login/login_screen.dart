@@ -1,4 +1,4 @@
-
+import '../register/register_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../core/theme/app_theme.dart';
 
@@ -173,15 +173,13 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   TextButton(
                     onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text(
-                            'Registro: próximamente',
-                          ),
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const RegisterScreen(),
                         ),
                       );
-                    },
-                    child: const Text(
+                    },                    child: const Text(
                       '¿No tienes cuenta? Crear una cuenta',
                     ),
                   ),
